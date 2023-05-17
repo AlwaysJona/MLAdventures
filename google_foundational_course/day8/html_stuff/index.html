@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>MLJ: Day 8</title>
+  </head>
+  <body>
+    <h1>Machine Learning with Jona</h1>
+    <h2>Day 8</h2>
+    <p class="subtitle">Simplicity</p>
+    <p>
+      Overcrossing could be a problem, if our data is basically linear with some
+      noise, giving too many feature crosses might make the model overfit to the
+      noise.
+    </p>
+    <p>
+      So we want as simple as a model as possible, and if the weights of some
+      features are way bigger the others, that might suggest an overcomplicated
+      model. To avoid this our model needs some kind of regularization, to
+      minimize complexity.
+    </p>
+    <p class="subtitle">L<sub>2</sub> Regularization</p>
+    <p>
+      L<sub>2</sub> Regularization consists of making the model minimize not
+      only the loss but also the sum of the weights squared, times some constant
+      that depends on the data, if training data and test data are very similar,
+      the constant will be very low.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>MLJ: Day 7</title>
+  </head>
+  <body>
+    <h1>Machine Learning with Jona</h1>
+    <h2>Day 7</h2>
+    <p class="subtitle">Representation</p>
+    <p>
+      A great amount of time must be spent organizing the data and representing
+      it correctly. For numeric features there is no problem since weights and
+      biases are numerical, but for features that are strings we need another
+      way of representing them. A solution might be
+      <code>one hot encoding</code>, assigning a value to an element in a vector
+      every time we run into that feature. We also need to pay attention to how
+      the data is presented to us, if it is understandable, if there are any
+      mistakes, if any number is out of range or if there are any
+      <b>magic values</b>.
+    </p>
+    <p class="subtitle">Cleaning Data</p>
+    <p>
+      You might need to scale the data, if a feature has a far bigger range than
+      another, the model will pay way more attention to the first one than the
+      latter. The data also needs to be scrubbed, any values outside 3 stddevs
+      may compromise your model.
+    </p>
+    <p class="subtitle">Feature crosses</p>
+    <p>
+      A feature cross is a synthetic feature that encodes non linearity. Since
+      linear models can be scaled very easily, having linear features would be
+      very helpful. You can cross two <code>one hot vector</code> that are not
+      linearly related but their cross feature is. For example if we had: the
+      feature x1 that could assume values <b>a</b> and <b>b</b> and x2 that
+      could assume valuse <b>c</b> and <b>d</b>, then their cross feature,
+      encoded in a 4D vector, tells us when we have <code> a AND c</code> or
+      <code> a AND d</code> or <code>b AND c</code> or <code>b AND d</code>.
+    </p>
+    <p class="subtitle">Programming excercise</p>
+    <p>
+      Saw how from a dataset i can turn a feature into a floating point value,
+      which did not give a nice result so continued with binning the interested
+      features, which was better, and finally feature crossed the two interested
+      features and got yet a better result.
+    </p>
+  </body>
+</html>

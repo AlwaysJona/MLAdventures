@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>MLJ: Day 6</title>
+  </head>
+  <body>
+    <h1>Machine Learning with Jona</h1>
+    <h2>Day 6</h2>
+    <p class="subtitle">Programming excercise on validation set</p>
+    <p>
+      The program run was basically the same as in the previous excercise, this
+      time there was a division between <code>train_df</code> and
+      <code>test_df</code>. And i added an argument to the
+      <code>train_model</code> function which was
+      <code>validation_split</code> effectively dividing the
+      <code>train_df</code> in 2. When you get your results you need to make
+      sure that when the model converges the training rmse and validation rmse
+      are the same otherwise there is some problem either in the data or the
+      model. In this case was the data, which was not properly shuffled. After
+      shuffling the two rmse were about the same. Finally you validate your
+      model with <code>test_df</code> and if the returned rmse is about the same
+      as those of the training and validation then you're good.
+    </p>
+  </body>
+</html>
