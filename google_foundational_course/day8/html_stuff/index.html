@@ -33,7 +33,18 @@
     <p>
       For some data we might only need a probability, for example for a coin
       toss. This probability is going to help us make predictions. To do that we
-      use linear logistic regression that has values only between 0 and 1,
+      use linear logistic regression that has values only between 0 and 1, a
+      sigmoid function has those characteristics.
+    </p>
+    <p class="subtitle">Loss and regularization</p>
+    <p>
+      For linear regression we use <b>squared losses</b>, for logistic
+      regression we uses <b>Log Loss</b>. Regularization is very important in
+      logistic regression, since the sigmoid tends to zero or one at plus or
+      minus infinity, the model will push the weights so high, or so low, just
+      to get there, and in no time we would have an overfit model. To avoid this
+      we can use both <b>L<sub>2</sub> regularization </b> or
+      <b>stopping early</b>.
     </p>
   </body>
 </html>
