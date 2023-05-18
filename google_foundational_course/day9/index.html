@@ -10,5 +10,29 @@
   <body>
     <h1>Machine Learning with Jona</h1>
     <h2>Day 9</h2>
+    <p class="subtitle">Classification</p>
+    <p>
+      We might not want to predict a value, but to classify a group of object
+      into a finite number of classes. For this the logistic regression might be
+      really usefull, yeilding the probability of something belonging to a
+      class, and setting a classification threshold: classifing an object if the probability is higher than a certain value. 
+      <b>Accuracy</b> is <b>not</b> a good metric, because there could be
+      class imbalances like 1 negative in 1000 positives, and the model by
+      guessing always positive would be 99.9% accurate, put it wouldn't be a
+      great model. </br>
+      Other metrics we can use are <b>Precision</b> and <b>Recall</b>:
+      <dl>
+        <dt>Precision</dt>
+        <dd>(True Positives)/(All positive predictions)</dd>
+        <dd>when the model said "positive", was it right, did it say it too often?</dd>
+        <dd>This tends to <b>lower</b> classification threshold</dd>
+
+        <dt>Recall</dt>
+        <dd>(True positives)/(Actual Positives)</dd>
+        <dd>how often did the model correctly identify positives? Did it miss any?</dd>
+        <dd>This tends to <b>increase</b> classification threshold</dd>
+        
+      </dl>
+    </p>
   </body>
 </html>
