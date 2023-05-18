@@ -42,7 +42,8 @@
     <p>An efficient way to evaluate this curve is with the <b>AUC: area under ROC curve</b>. The area under the ROC curve gives the following:
     probability that the model ranks a random positive higher than a random negative, by ranking i mean giving it a probability of being positive.</p>
     <p>Logistic prediction models should be <b>unbiased</b>. So the average of prediction should be roughly equal to the average of observation.
-    The prediction bias is their difference. Adding a <b>calibration layer</b> is a bad idea, you will end up relying on it and not fixing the model itself.</p>
+    The prediction bias is their difference. Adding a <b>calibration layer</b> is a bad idea, you will end up relying on it and not fixing the model itself.
+    To analyze the bias use examples grouped in <b>buckets</b>, since the output of the model will be between 0 and 1 but each example is either 0 or 1.</p>
 
 
 
