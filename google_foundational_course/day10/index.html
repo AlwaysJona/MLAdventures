@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>MLJ: Day 10</title>
+    <script src="https://fred-wang.github.io/TeXZilla/TeXZilla-min.js"></script>
+    <script src="https://fred-wang.github.io/TeXZilla/examples/customElement.js"></script>
   </head>
   <body>
     <h1>Machine Learning with Jona</h1>
@@ -31,5 +33,21 @@
           <dd>strongly informative features on different scales</dd>
         </dl>
     </p>
+    <p class="subtitle">Neural Networks</p>
+    <p>If a model is not linear, instead of trying to figure out the right non-linearity, 
+      in order to make a feature cross that will make our linear model work, we can add hidden layers and at the end of each of them,
+      pass a non linear function, called an <b>Activation Function</b>.
+
+    </p>
+    <p class="subtitle">Common Activation functions</p>
+    <p> 
+      To convert any value in a range from 0 to 1, the <b>sigmoid</b> is used:
+      <la-tex> F(x) = \frac{1}{1+e^{-x}} </la-tex>. </br>
+      A more commonly used Activation function is the <b>ReLU</b> (rectified linear unit): <la-tex>F(x) = max(0,x)</la-tex>
+    </p>
+    <p>Making a deep neural network with a lot of layers and nodes, will make it learn very complex shapes,
+      possibly overfitting the data.
+    </p>
+    
   </body>
 </html>
