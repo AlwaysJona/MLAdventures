@@ -10,6 +10,26 @@
   <body>
     <h1>Machine Learning with Jona</h1>
     <h2>Day 10</h2>
-    <p class="subtitle">sub</p>
+    <p class="subtitle">Regularization: Sparsity</p>
+    <p>
+      If we have features that have the possibility of being a lot of different
+      things, so they have very big dimensions, crossing them with other
+      features of the same kind would produce a ton of weights, even when most
+      of those combinations are irrelevant. Features of this kind are called
+      <b>sparse</b>, and to take care of them we could use L<sub>1</sub>
+      regularization. It consists of
+      <b> minimizing the sum of the absolute values of the weights</b>. This
+      way, irrelevant weights can reach 0, unlike L<sub>2</sub>
+      regularization.
+    </p>
+    <p>
+      in a model with a lot of informative features, the L<sub>1</sub>, may
+      cause some of them to be exactly 0 in these cases:
+        <dl>
+          <dd>weakly informative features</dd>
+          <dd>informative features strongly correlated to other informative features</dd>
+          <dd>strongly informative features on different scales</dd>
+        </dl>
+    </p>
   </body>
 </html>
