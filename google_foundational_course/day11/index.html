@@ -12,7 +12,28 @@
   <body>
     <h1>Machine Learning with Jona</h1>
     <h2>Day 11</h2>
-    <p class="subtitle"></p>
-    <p></p>
+    <p class="subtitle">Training Neural Nets</p>
+    <p>
+      Tensorflow handles the <em>backpropagation</em> on its own. But there are
+      a number of ways in which it can go wrong
+      <dl>
+        <dt>Vanishing Gradients</dt>
+        <dd>The gradient of the lower layers could get too close to zero, making the 
+            training process very slow, or not event training at all. ReLU activation helps prevent this.</dd>
+        <dt>Exploding Gradients</dt>
+        <dd>On the contrary, gradients could also get very high, if the weights are very high, and the loss function
+          may not converge. To avoid this normilizing the features helps.
+        </dd>
+        <dt>Dead ReLU Units</dt>
+        <dd>Once the weighted sum gets below zero, a ReLU unit could get stuck, since it would always return 0.
+          To avoid this lowering the Learning rate could be helpful.
+        </dd>
+
+      </dl>
+    </p>
+    <p class="subtitle"> Dropout Regularization</p>
+    <p><b>Dropout</b> is another form of regularization, and it consists of skipping one random unit of activation
+    for a single gradient step. The more units dropped, the greater the regularization. Like all regularizations, 
+    it helps preventing overfitting.</p>
   </body>
 </html>
