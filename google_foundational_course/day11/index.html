@@ -42,5 +42,23 @@
     and a better way to handle this would be with a deep Neural Net, in which each output node represents a different class.
     
     </p>
+    <p class="subtitle">SoftMax</p>
+    <p>In a Multi-Class model we would like the outputs to be probabilities, thus floating point values between 0 and 1, and we'd like
+      that they'd add up to one. <b>SoftMax</b> equation does exactly that, it is implemented one layer before the output, and the formula is: <br>
+      <la-tex>p(y= j|x) = \frac{e^{(w_j^T x +b_j)}}{\sum_{k \in K}e^{(w_k^T x +b_k)} }</la-tex> <br>
+      Softmax is useful only in cases where each candidate can be a part of <b>only one class</b>, but if it has many possible classes it can belong to
+      simultaneously then the alternatives are: to <b>not</b> use SoftMax and to use <b>multiple regression models</b> instead.
+    </p>
+    <p class="subtitle">SoftMax Options</p>
+    <p>
+      <dl>
+        <dt>Full SoftMax</dt>
+        <dd>SoftMax calculates probability for every possible class</dd>
+        <dt>Candidate Sampling</dt>
+        <dd>Calculates probabilities for all possible positive labels, and only for a random sample of negative labels.</dd>
+      </dl>
+      Candidate Sampling can improve performance when the number of classes climbs.
+    </p>
+
   </body>
 </html>
