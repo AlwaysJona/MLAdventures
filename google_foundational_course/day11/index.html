@@ -35,5 +35,12 @@
     <p><b>Dropout</b> is another form of regularization, and it consists of skipping one random unit of activation
     for a single gradient step. The more units dropped, the greater the regularization. Like all regularizations, 
     it helps preventing overfitting.</p>
+    <p class="subtitle">Multi-Class Neural Nets</p>
+    <p>In a Multi-Class Neural Net we can use several binary logistic regressions, where we train a binary classifier for 
+    each possible outcome using <b>one-vs-all</b>. For instance, given a problem with 8 different classes, 8 recognizers might be trained, one giving 
+    a positive output, and 7 giving negative. This becomes very inefficient when working with a larger number of possible classes,
+    and a better way to handle this would be with a deep Neural Net, in which each output node represents a different class.
+    
+    </p>
   </body>
 </html>
