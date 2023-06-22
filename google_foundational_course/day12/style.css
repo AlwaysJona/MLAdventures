@@ -1,0 +1,42 @@
+h1,
+h2 {
+  text-align: center;
+}
+
+.subtitle {
+  color: green;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+code {
+  background-color: rgb(220, 220, 220);
+  font-size: 11px;
+  border-radius: 1px;
+  padding: 0 2px;
+}
+
+dt {
+  text-decoration: underline;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p,
+dt,
+dl {
+  width: 500px;
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+p {
+  text-align: center;
+}
