@@ -57,6 +57,36 @@
       dimensional ones, maintaining the semantic relationships.
     </p>
     <h3>Embeddings: Translating to a Lower-Dimensional Space</h3>
-    <p></p>
+    <p>
+      Even a small multi dimensional space, can successfully group semantically
+      similar items. Position, direction and distance can encode meaningful
+      semantics in good embeddings. A useful embedding may be on the order of
+      undreds of dimensions, which is probably several orders of magnitude
+      smaller than the vocabulary.
+    </p>
+    <h3>Obtaining Embeddings</h3>
+    <p>
+      There are many techniques to capture the important structure of a high
+      dimensional venctor, one of them is <b>PCA</b> (Principal Component
+      Analysis), that tries to fined highly correlated embeddings, and collapse
+      them into one.
+      <h4>Word2vec</h4>
+      <p>Word2vec is an algorithm developed at Google, that relies on the distributional hypotesis
+        which states that words that often have the same neighboring words tend to have the same semantics.
+        This algorithm trains a neural network to distinguish co-occourring groups of words from randomly grouped words.
+        In one version the system makes a negative example by substituting a random nise word, for the target word.
+        Given the positive "the plane flies", the system might swap to "the jogging flies". <br>
+        The other version takes pairings containing the target word and random context words, and then learns to distinguish
+        between positive cases and negative ones. <br>
+        After the model has been trained, we have an embedding. So you can use the weights connecting the input layer
+        to the hidden layer to map a sparse representation to a smaller vector.
+      </p>
+      <h3>Training an Embedding as Part of a Larger Model</h3>
+      <p>You can also train the embeddings as part of the model, this way though it might take longer for the model to be optimized, so it
+        may be better to train it separately. <br>
+        In general when you have sparse data you can create an embedding unit that's a special type of hidden unit of size d,
+        and it can be combined with any other features and hidden layers.
+      </p>
+    </p>
   </body>
 </html>
