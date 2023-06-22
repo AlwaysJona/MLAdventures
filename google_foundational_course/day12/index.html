@@ -13,5 +13,50 @@
     <h1>Machine Learning with Jona</h1>
     <h2>Day 12</h2>
     <p class="subtitle">Embeddings</p>
+    <p>
+      Embeddings are a type of hidden layers used to map the training data to
+      lower dimensional, which means that each sample becomes a point in this
+      space, and the closer two points are, the more similar the two samples
+      are. This is useful for example for movie reccomendation in a streaming
+      app. For this purpose <b>Collaborative Filtering</b> is used, which is the
+      task of making prediction for one user's interest based on the other
+      users' interests.
+    </p>
+    <h3>Categorical Input Data</h3>
+    <p>
+      Categorical data refers to the input features that represent one or more
+      discrete items from a set of choices. For example the movies a user has
+      watched. These are represented via <b>sparse tensors</b>, which are
+      tensors with very few non-zero elements, so if we give a unique id to each
+      movie, a user can be described by a sparse tensor of the movie he has
+      watched.
+    </p>
+    <p>
+      In order to represent such system we could use <em>one-hot encoding</em>,
+      where for each user we have a tensor for dimension equal to the elements
+      in the vocabulary (meaning all the movies in this case), and assign a 1 to
+      the index corresponding to the movie the user has watched, and 0 othewise.
+      This method generates very sparse input vectors, and it may lead to some
+      problems.
+    </p>
+    <h4>Size of Network</h4>
+    <p>
+      Huge input vectors mean even larger amounts of weights for a neural
+      Network, which means that more data will be neded to train the model
+      properly. Furthermore computing and adjusting all these weights requires a
+      lot of computation.
+    </p>
+    <h4>Lack of Meaningful relation between vectors</h4>
+    <p>
+      At this point a large sparse vector of the movie "Avengers" isn't any
+      closer to a vector for the movie "Memento" then it is to "Shrek".
+    </p>
+    <h4>The solution: Embeddings</h4>
+    <p>
+      Embeddings allow us to translate these high dimension vectors into lower
+      dimensional ones, maintaining the semantic relationships.
+    </p>
+    <h3>Embeddings: Translating to a Lower-Dimensional Space</h3>
+    <p></p>
   </body>
 </html>
